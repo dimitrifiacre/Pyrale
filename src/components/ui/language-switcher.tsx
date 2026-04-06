@@ -20,7 +20,7 @@ const LANGUAGES = [
   { value: "en", label: "English" },
 ];
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ solid }: { solid: boolean }) {
   const t = useTranslations();
   const locale = useLocale();
   const router = useRouter();
@@ -31,15 +31,13 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" isIcon aria-label={t("navbar.actions.change_language")}>
+        <Button variant="ghost" isIcon aria-label={t("navbar.actions.change_language")} className={!solid ? "text-neutral-50 hover:text-neutral-50 hover:bg-neutral-50/10" : undefined} >
           <Globe />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-40" align="end">
-        <DropdownMenuLabel>{t("navbar.actions.change_language")}</DropdownMenuLabel>
-        <DropdownMenuSeparator />
+      <DropdownMenuContent align="end">
         <DropdownMenuRadioGroup value={locale} onValueChange={handleChange}>
           {LANGUAGES.map(({ value, label }) => (
             <DropdownMenuRadioItem key={value} value={value}>

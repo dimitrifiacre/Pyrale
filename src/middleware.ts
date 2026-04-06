@@ -10,8 +10,17 @@ export function middleware(request: NextRequest) {
       ? cookieLocale
       : DEFAULT_LOCALE;
 
-  const response = NextResponse.next();
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-locale", locale);
+
+  const response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
+
   response.headers.set("x-locale", locale);
+  
   return response;
 }
 
