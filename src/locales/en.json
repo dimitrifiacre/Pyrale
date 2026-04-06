@@ -1,0 +1,173 @@
+{
+  "common": {
+    "validation": {
+      "required": "This field is required",
+      "email_invalid": "The email address is not valid",
+      "min_chars": "Minimum {count} characters",
+      "max_chars": "Maximum {count} characters"
+    },
+    "form": {
+      "send": "Send",
+      "error": {
+        "title": "Error",
+        "description": "An error occurred, please try again later."
+      },
+      "captcha_error_title": "Verification failed",
+      "captcha_error_desc": "The system could not confirm that you are human."
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Event group on Hytale",
+      "description": "Pyrale is an event group on Hytale. Take part in unique events and join the community."
+    },
+    "events": {
+      "title": "Events",
+      "description": "Discover upcoming Pyrale events. Stay informed about announcements, dates, and must-see experiences."
+    },
+    "about": {
+      "title": "About",
+      "description": "Discover Pyrale, who we are, our organization, and the team behind the Hytale events."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with the Pyrale team via our contact form."
+    }
+  },
+  "navbar": {
+    "links": {
+      "events": "Events",
+      "about": "About",
+      "contact": "Contact",
+      "playground": "Playground"
+    },
+    "actions": {
+      "login": "Log in",
+      "change_language": "Change language"
+    },
+    "aria": {
+      "home": "Home page",
+      "open_menu": "Open menu",
+      "close_menu": "Close menu",
+      "user_profile": "Log in"
+    }
+  },
+  "about": {
+    "title": "We are Pyrale",
+    "subtitle": "A group of enthusiasts dedicated to innovation to sustainably transform entertainment.",
+    "means": {
+      "badge": "Our approach",
+      "heading": "A creative ideas laboratory",
+      "description": "Imagine, design, test, iterate: a continuous cycle, just like the life of a butterfly. Pyrale is a laboratory of technical and creative ideas serving entertainment. We have a strong desire to innovate and iterate in all areas and never rest on our achievements."
+    },
+    "organization": {
+      "badge": "Our organization",
+      "heading": "A group of enthusiasts",
+      "description": "Pyrale is a non-profit organization driven by a volunteer team working on the project out of passion. We place great importance on transparency and honesty, both internally and with the community. Our decisions are made collectively, by consensus, a fundamental principle written into our statutes."
+    },
+    "team": {
+      "badge": "Our team",
+      "heading": "The dream team",
+      "description": "Meet the talents that make Pyrale a unique experience!",
+      "roles": {
+        "management": "Management",
+        "art_director": "Art Director",
+        "developer": "Developer",
+        "designer": "Designer",
+        "qa": "Testing & Quality"
+      }
+    },
+    "join": {
+      "badge": "Join Pyrale",
+      "heading": "Want to join us?",
+      "description": "An organization driven by enthusiasts, open to anyone who wants to get involved.",
+      "button": "Join us"
+    },
+    "aria": {
+      "twitter": "{name}'s Twitter",
+      "discord": "{name}'s Discord"
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Write to us using the form below, we’ll get back to you as soon as possible.",
+    "form": {
+      "pseudo": "Username",
+      "email": "Email",
+      "message": "Message",
+      "success": {
+        "title": "Message sent",
+        "description": "We’ll get back to you as soon as possible"
+      },
+      "validation": {
+        "username_min": "The username must contain at least {count} characters",
+        "username_max": "The username cannot exceed {count} characters",
+        "message_min": "The message must contain at least {count} characters",
+        "message_max": "The message cannot exceed {count} characters"
+      }
+    },
+    "discord": {
+      "heading": "Got a question? We’ll answer you on Discord",
+      "description": "If you prefer to chat live or follow our news in real time, join the Pyrale community.",
+      "button": "Join the Discord"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Group dedicated to organizing events on Hytale",
+      "subtitle": "We are a non-profit organization that creates and organizes community events around the game Hytale."
+    },
+    "event_banner": {
+      "label": "Upcoming event",
+      "cta_join": "Join",
+      "cta_learn_more": "Learn more"
+    },
+    "discord": {
+      "heading": "Don’t miss any announcements",
+      "description": "Join our Discord to get early access to all Pyrale news and announcements.",
+      "button": "Join the Discord"
+    }
+  },
+  "event": {
+    "title": "Our events",
+    "subtitle": "Our first events are currently in preparation, announcements will be published soon.",
+    "discord": {
+      "heading": "Don’t miss any announcements",
+      "description": "Join our Discord to get early access to all Pyrale news and announcements.",
+      "button": "Join the Discord"
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Where experiences transform",
+      "home_aria": "Home page"
+    },
+    "sections": {
+      "title": "Footer navigation",
+      "navigation": {
+        "title": "Navigation",
+        "home": "Home",
+        "events": "Events",
+        "about": "About",
+        "contact": "Contact"
+      },
+      "legal": {
+        "title": "Legal",
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "notice": "Legal Notice"
+      }
+    },
+    "social": {
+      "aria_label": "Visit our {name}"
+    },
+    "bottom": {
+      "copyright": "© {year} Pyrale - All rights reserved",
+      "theme": {
+        "label": "Theme",
+        "light": "Light",
+        "dark": "Dark"
+      }
+    }
+  }
+}

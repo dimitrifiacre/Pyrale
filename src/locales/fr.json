@@ -1,0 +1,173 @@
+{
+  "common": {
+    "validation": {
+      "required": "Ce champ est obligatoire",
+      "email_invalid": "L'adresse email n'est pas valide",
+      "min_chars": "Minimum {count} caractères",
+      "max_chars": "Maximum {count} caractères"
+    },
+    "form": {
+      "send": "Envoyer",
+      "error": {
+        "title": "Erreur",
+        "description": "Une erreur est survenue, réessaie un peu plus tard."
+      },
+      "captcha_error_title": "Vérification échouée",
+      "captcha_error_desc": "Le système n'a pas pu confirmer que vous êtes un humain."
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Groupe événementiel sur Hytale",
+      "description": "Pyrale est un groupe événementiel sur Hytale. Participe à des événements uniques et rejoins la communauté."
+    },
+    "events": {
+      "title": "Événements",
+      "description": "Découvrez les événements Pyrale à venir. Restez informé des annonces, des dates et des expériences à ne pas manquer."
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Découvrez Pyrale, qui nous sommes, notre organisation et l'équipe derrière les événements Hytale."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contactez l'équipe Pyrale via notre formulaire de contact."
+    }
+  },
+  "navbar": {
+    "links": {
+      "events": "Événements",
+      "about": "À propos",
+      "contact": "Contact",
+      "playground": "Playground"
+    },
+    "actions": {
+      "login": "Se connecter",
+      "change_language": "Changer de langue"
+    },
+    "aria": {
+      "home": "Page d'accueil",
+      "open_menu": "Ouvrir le menu",
+      "close_menu": "Fermer le menu",
+      "user_profile": "Se connecter"
+    }
+  },
+  "about": {
+    "title": "Nous sommes Pyrale",
+    "subtitle": "Une association de passionnés dédiée à l'innovation pour transformer durablement le divertissement.",
+    "means": {
+      "badge": "Nos moyens",
+      "heading": "Un laboratoire d'idées créatives",
+      "description": "Imaginer, concevoir, tester, recommencer : un cycle continu à l'image de la vie d'un papillon. Pyrale est un laboratoire d'idées techniques et créatives au service du divertissement. Nous avons la volonté forte d'innover et d'itérer dans tous les domaines et de ne jamais nous reposer sur nos acquis."
+    },
+    "organization": {
+      "badge": "Notre organisation",
+      "heading": "Une association de passionnés",
+      "description": "Pyrale est une association à but non lucratif, portée par une équipe bénévole qui travaille sur le projet par passion. Nous attachons une grande importance à la transparence et l'honnêteté, tant en interne qu'auprès de la communauté. Nos décisions sont prises collectivement, par consensus, un principe fondamental inscrit dans nos statuts."
+    },
+    "team": {
+      "badge": "Notre équipe",
+      "heading": "La dream team",
+      "description": "Rencontrez les talents qui font de Pyrale une expérience unique !",
+      "roles": {
+        "management": "Gestion",
+        "art_director": "Directeur artistique",
+        "developer": "Développeur",
+        "designer": "Concepteur",
+        "qa": "Tests et qualité"
+      }
+    },
+    "join": {
+      "badge": "Rejoindre Pyrale",
+      "heading": "Envie de nous rejoindre ?",
+      "description": "Une association portée par des passionnés, ouverte à celles et ceux qui veulent s'impliquer.",
+      "button": "Nous rejoindre"
+    },
+    "aria": {
+      "twitter": "Twitter de {name}",
+      "discord": "Discord de {name}"
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Écris-nous via le formulaire ci-dessous, on te répondra dans les plus brefs délais.",
+    "form": {
+      "pseudo": "Pseudo",
+      "email": "E-mail",
+      "message": "Message",
+      "success": {
+        "title" : "Message envoyé",
+        "description" : "On te répondra dès que possible"
+      },
+      "validation": {
+        "username_min": "Le pseudo doit contenir au moins {count} caractères",
+        "username_max": "Le pseudo ne peut pas dépasser {count} caractères",
+        "message_min": "Le message doit contenir au moins {count} caractères",
+        "message_max": "Le message ne peut pas dépasser {count} caractères"
+      }
+    },
+    "discord": {
+      "heading": "Une question ? On te répond sur Discord",
+      "description": "Si tu préfères discuter en direct ou suivre nos actualités en temps réel, rejoins la communauté Pyrale.",
+      "button": "Rejoindre le discord"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Groupe dédié à l'organisation d'événements sur Hytale",
+      "subtitle": "Nous sommes une association à but non lucratif qui crée et organise des événements communautaires autour du jeu Hytale."
+    },
+    "event_banner": {
+      "label": "Prochain événement",
+      "cta_join": "Participer",
+      "cta_learn_more": "En savoir plus"
+    },
+    "discord": {
+      "heading": "Ne manque aucune annonce",
+      "description": "Rejoins notre Discord pour être informé en avant-première de toutes les actualités et annonces de Pyrale.",
+      "button": "Rejoindre le discord"
+    }
+  },
+  "event": {
+    "title": "Nos événements",
+    "subtitle": "Nos premiers événements sont actuellement en préparation, les annonces seront publiées prochainement.",
+    "discord": {
+      "heading": "Ne manque aucune annonce",
+      "description": "Rejoins notre Discord pour être informé en avant-première de toutes les actualités et annonces de Pyrale.",
+      "button": "Rejoindre le discord"
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Là où les expériences se métamorphosent",
+      "home_aria": "Page d'accueil"
+    },
+    "sections": {
+      "title": "Navigation du pied de page",
+      "navigation": {
+        "title": "Navigation",
+        "home": "Accueil",
+        "events": "Événements",
+        "about": "À propos",
+        "contact": "Contact"
+      },
+      "legal": {
+        "title": "Légal",
+        "terms": "CGU",
+        "privacy": "Politique de confidentialité",
+        "notice": "Mentions légales"
+      }
+    },
+    "social": {
+      "aria_label": "Visiter notre {name}"
+    },
+    "bottom": {
+      "copyright": "© {year} Pyrale - Tous droits réservés",
+      "theme": {
+        "label": "Thème",
+        "light": "Clair",
+        "dark": "Sombre"
+      }
+    }
+  }
+}
