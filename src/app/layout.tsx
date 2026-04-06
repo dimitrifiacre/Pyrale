@@ -52,7 +52,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html lang={locale} suppressHydrationWarning className={cn("font-sans", geist.variable)}>
       <body className={`${rubikSans.variable} min-h-screen bg-background text-foreground antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
             {children}
             <Toaster position="top-right" />
           </ThemeProvider>
