@@ -27,7 +27,6 @@ const NAV_LINKS: NavLink[] = [
   { labelKey: "navbar.links.events", href: "/events" },
   { labelKey: "navbar.links.about", href: "/about" },
   { labelKey: "navbar.links.contact", href: "/contact" },
-  { labelKey: "navbar.links.playground", href: "/playground" },
 ];
 
 const LANGUAGES = [
