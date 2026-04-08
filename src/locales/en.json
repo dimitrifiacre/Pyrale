@@ -12,8 +12,7 @@
         "title": "Error",
         "description": "An error occurred, please try again later."
       },
-      "captcha_error_title": "Verification failed",
-      "captcha_error_desc": "The system could not confirm that you are human."
+      "recaptcha": "This site is protected by reCAPTCHA and the <privacy>privacy policy</privacy> and <terms>terms of service</terms> of Google apply."
     }
   },
   "meta": {

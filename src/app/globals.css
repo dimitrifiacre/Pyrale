@@ -18,6 +18,10 @@ body {
   font-family: var(--font-rubik), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.grecaptcha-badge { 
+  visibility: hidden; 
+}
+
 :where([data-sonner-toast]) :where([data-icon]) {
   height: auto!important;
   width: auto!important;

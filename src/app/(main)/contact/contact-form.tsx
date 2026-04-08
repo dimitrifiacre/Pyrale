@@ -141,6 +141,13 @@ export function ContactForm() {
       <Button type="submit" className="w-full" disabled={isLoading}>
         {isLoading ? ( <Spinner /> ) : ( tc("form.send") )}
       </Button>
+
+      <p className="text-xs text-muted-foreground">
+        {tc.rich('form.recaptcha', {
+          privacy: (chunks) => ( <a href="https://policies.google.com/privacy">{chunks}</a> ),
+          terms: (chunks) => ( <a href="https://policies.google.com/terms">{chunks}</a> ),
+        })}
+      </p>
     </form>
   )
 }
