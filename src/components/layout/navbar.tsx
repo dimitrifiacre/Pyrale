@@ -114,7 +114,7 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((prev) => !prev)}
           >
-            <MenuIcon animate={mobileOpen} size={16} />
+            <MenuIcon animate={mobileOpen} size={16} className={`${!isSolid && "text-neutral-50 hover:bg-neutral-50/10"}`} />
           </Button>
 
           <Link
