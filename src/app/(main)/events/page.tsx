@@ -48,7 +48,7 @@ export default async function EventPage() {
           </div>
         </div>
         <Button className="text-white bg-[#5865F2] hover:bg-[#4B59F1]" asChild>
-          <Link href="https://discord.gg/4WZNzwE9xR" target="_blank">{t("discord.button")}</Link>
+          <Link href="http://pyrale.com/discord" target="_blank">{t("discord.button")}</Link>
         </Button>
       </section>
     </div>
