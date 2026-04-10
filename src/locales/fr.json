@@ -22,15 +22,23 @@
     },
     "events": {
       "title": "Événements",
-      "description": "Découvrez les événements Pyrale à venir. Restez informé des annonces, des dates et des expériences à ne pas manquer."
+      "description": "Découvre les événements Pyrale à venir. Reste informé des annonces, des dates et des expériences à ne pas manquer."
     },
     "about": {
       "title": "À propos",
-      "description": "Découvrez Pyrale, qui nous sommes, notre organisation et l'équipe derrière les événements Hytale."
+      "description": "Découvre Pyrale, qui nous sommes, notre organisation et l'équipe derrière les événements Hytale."
     },
     "contact": {
       "title": "Contact",
-      "description": "Contactez l'équipe Pyrale via notre formulaire de contact."
+      "description": "Contacte l'équipe Pyrale via notre formulaire de contact."
+    },
+    "login": {
+      "title": "Se connecter",
+      "description": "Connecte-toi à ton compte Pyrale et participe à nos événements."
+    },
+    "register": {
+      "title": "Créer un compte",
+      "description": "Crée-toi un compte Pyrale et participe à nos événements."
     }
   },
   "navbar": {
@@ -137,6 +145,28 @@
     }
   },
   "auth": {
+    "register": {
+      "title": "Ravi de te rencontrer !",
+      "subtitle": "Tu as déjà un compte ?",
+      "subtitle_link": "Connecte-toi",
+      "back": "Retour",
+      "pseudo": "Pseudo",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirm_password": "Confirmer le mot de passe",
+      "terms": "J'accepte les <terms>Conditions Générales d'Utilisation</terms> et la <privacy>Politique de confidentialité</privacy>.",
+      "submit": "S'inscrire",
+      "submit_google": "S'inscrire avec Google",
+      "submit_discord": "S'inscrire avec Discord",
+      "submit_twitch": "S'inscrire avec Twitch",
+      "or": "ou",
+      "show_password": "Afficher le mot de passe",
+      "hide_password": "Masquer le mot de passe",
+      "validation": {
+        "passwords_mismatch": "Les mots de passe ne correspondent pas",
+        "terms_required": "Tu dois accepter les conditions pour continuer"
+      }
+    },
     "login": {
       "title": "Content de te revoir !",
       "subtitle": "Pas encore de compte ?",

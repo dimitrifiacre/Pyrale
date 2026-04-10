@@ -31,6 +31,14 @@
     "contact": {
       "title": "Contact",
       "description": "Get in touch with the Pyrale team via our contact form."
+    },
+    "login": {
+      "title": "Log in",
+      "description": "Log in to your Pyrale account and join our events."
+    },
+    "register": {
+      "title": "Create an account",
+      "description": "Create your Pyrale account and join our events."
     }
   },
   "navbar": {
@@ -137,6 +145,28 @@
     }
   },
   "auth": {
+    "register": {
+      "title": "Nice to meet you!",
+      "subtitle": "Already have an account?",
+      "subtitle_link": "Log in",
+      "back": "Back",
+      "pseudo": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm password",
+      "terms": "I accept the <terms>Terms of Service</terms> and the <privacy>Privacy Policy</privacy>.",
+      "submit": "Sign up",
+      "submit_google": "Sign up with Google",
+      "submit_discord": "Sign up with Discord",
+      "submit_twitch": "Sign up with Twitch",
+      "or": "or",
+      "show_password": "Show password",
+      "hide_password": "Hide password",
+      "validation": {
+        "passwords_mismatch": "Passwords do not match",
+        "terms_required": "You must accept the terms to continue"
+      }
+    },
     "login": {
       "title": "Nice to see you again!",
       "subtitle": "Don't have an account yet?",
