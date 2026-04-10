@@ -27,11 +27,11 @@ export function ContactForm() {
   const schema = useMemo(
     () =>
       createContactSchema({
-        pseudoMin: t("validation.username_min", { count: CONTACT_CONSTRAINTS.pseudoMin }),
-        pseudoMax: t("validation.username_max", { count: CONTACT_CONSTRAINTS.pseudoMax }),
+        pseudoMin: tc("validation.min_username", { count: CONTACT_CONSTRAINTS.pseudoMin }),
+        pseudoMax: tc("validation.max_username", { count: CONTACT_CONSTRAINTS.pseudoMax }),
         emailInvalid: tc("validation.email_invalid"),
-        messageMin: t("validation.message_min", { count: CONTACT_CONSTRAINTS.messageMin }),
-        messageMax: t("validation.message_max", { count: CONTACT_CONSTRAINTS.messageMax }),
+        messageMin: tc("validation.min_message", { count: CONTACT_CONSTRAINTS.messageMin }),
+        messageMax: tc("validation.max_message", { count: CONTACT_CONSTRAINTS.messageMax }),
       }),
     [tc]
   )
@@ -104,7 +104,7 @@ export function ContactForm() {
       />
 
       <Field>
-        <FieldLabel htmlFor="pseudo">{t("pseudo")}</FieldLabel>
+        <FieldLabel htmlFor="pseudo">{tc("fields.username")}</FieldLabel>
         <Input
           id="pseudo"
           type="text"
@@ -116,7 +116,7 @@ export function ContactForm() {
       </Field>
 
       <Field>
-        <FieldLabel htmlFor="email">{t("email")}</FieldLabel>
+        <FieldLabel htmlFor="email">{tc("fields.email")}</FieldLabel>
         <Input
           id="email"
           type="email"

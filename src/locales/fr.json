@@ -1,13 +1,27 @@
 {
   "common": {
+    "fields": {
+      "username": "Pseudo",
+      "email": "Email",
+      "password": "Mot de passe",
+      "show_password": "Afficher le mot de passe",
+      "hide_password": "Masquer le mot de passe"
+    },
     "validation": {
       "required": "Ce champ est obligatoire",
       "email_invalid": "L'adresse email n'est pas valide",
       "min_chars": "Minimum {count} caractères",
-      "max_chars": "Maximum {count} caractères"
+      "max_chars": "Maximum {count} caractères",
+      "min_username": "Le pseudo doit contenir au moins {count} caractères",
+      "max_username": "Le pseudo ne peut pas dépasser {count} caractères",
+      "min_message": "Le message doit contenir au moins {count} caractères",
+      "max_message": "Le message ne peut pas dépasser {count} caractères",
+      "passwords_mismatch": "Les mots de passe ne correspondent pas",
+      "terms_required": "Tu dois accepter les conditions pour continuer"
     },
     "form": {
       "send": "Envoyer",
+      "or": "ou",
       "error": {
         "title": "Erreur",
         "description": "Une erreur est survenue, réessaie un peu plus tard."
@@ -99,18 +113,10 @@
     "title": "Nous contacter",
     "subtitle": "Écris-nous via le formulaire ci-dessous, on te répondra dans les plus brefs délais.",
     "form": {
-      "pseudo": "Pseudo",
-      "email": "E-mail",
       "message": "Message",
       "success": {
-        "title" : "Message envoyé",
-        "description" : "On te répondra dès que possible"
-      },
-      "validation": {
-        "username_min": "Le pseudo doit contenir au moins {count} caractères",
-        "username_max": "Le pseudo ne peut pas dépasser {count} caractères",
-        "message_min": "Le message doit contenir au moins {count} caractères",
-        "message_max": "Le message ne peut pas dépasser {count} caractères"
+        "title": "Message envoyé",
+        "description": "On te répondra dès que possible"
       }
     },
     "discord": {
@@ -150,39 +156,24 @@
       "subtitle": "Tu as déjà un compte ?",
       "subtitle_link": "Connecte-toi",
       "back": "Retour",
-      "pseudo": "Pseudo",
-      "email": "Email",
-      "password": "Mot de passe",
       "confirm_password": "Confirmer le mot de passe",
       "terms": "J'accepte les <terms>Conditions Générales d'Utilisation</terms> et la <privacy>Politique de confidentialité</privacy>.",
       "submit": "S'inscrire",
       "submit_google": "S'inscrire avec Google",
       "submit_discord": "S'inscrire avec Discord",
-      "submit_twitch": "S'inscrire avec Twitch",
-      "or": "ou",
-      "show_password": "Afficher le mot de passe",
-      "hide_password": "Masquer le mot de passe",
-      "validation": {
-        "passwords_mismatch": "Les mots de passe ne correspondent pas",
-        "terms_required": "Tu dois accepter les conditions pour continuer"
-      }
+      "submit_twitch": "S'inscrire avec Twitch"
     },
     "login": {
       "title": "Content de te revoir !",
       "subtitle": "Pas encore de compte ?",
       "subtitle_link": "Inscris-toi",
       "back": "Retour",
-      "email": "Email",
-      "password": "Mot de passe",
       "remember_me": "Se souvenir de moi",
       "forgot_password": "Mot de passe oublié ?",
       "submit": "Se connecter",
       "submit_google": "Se connecter avec Google",
       "submit_discord": "Se connecter avec Discord",
-      "submit_twitch": "Se connecter avec Twitch",
-      "or": "ou",
-      "show_password": "Afficher le mot de passe",
-      "hide_password": "Masquer le mot de passe"
+      "submit_twitch": "Se connecter avec Twitch"
     }
   },
   "footer": {

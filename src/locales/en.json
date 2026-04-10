@@ -1,13 +1,27 @@
 {
   "common": {
+    "fields": {
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "show_password": "Show password",
+      "hide_password": "Hide password"
+    },
     "validation": {
       "required": "This field is required",
       "email_invalid": "The email address is not valid",
       "min_chars": "Minimum {count} characters",
-      "max_chars": "Maximum {count} characters"
+      "max_chars": "Maximum {count} characters",
+      "min_username": "The username must contain at least {count} characters",
+      "max_username": "The username cannot exceed {count} characters",
+      "min_message": "The message must contain at least {count} characters",
+      "max_message": "The message cannot exceed {count} characters",
+      "passwords_mismatch": "Passwords do not match",
+      "terms_required": "You must accept the terms to continue"
     },
     "form": {
       "send": "Send",
+      "or": "or",
       "error": {
         "title": "Error",
         "description": "An error occurred, please try again later."
@@ -97,24 +111,16 @@
   },
   "contact": {
     "title": "Contact us",
-    "subtitle": "Write to us using the form below, we’ll get back to you as soon as possible.",
+    "subtitle": "Write to us using the form below, we'll get back to you as soon as possible.",
     "form": {
-      "pseudo": "Username",
-      "email": "Email",
       "message": "Message",
       "success": {
         "title": "Message sent",
-        "description": "We’ll get back to you as soon as possible"
-      },
-      "validation": {
-        "username_min": "The username must contain at least {count} characters",
-        "username_max": "The username cannot exceed {count} characters",
-        "message_min": "The message must contain at least {count} characters",
-        "message_max": "The message cannot exceed {count} characters"
+        "description": "We'll get back to you as soon as possible"
       }
     },
     "discord": {
-      "heading": "Got a question? We’ll answer you on Discord",
+      "heading": "Got a question? We'll answer you on Discord",
       "description": "If you prefer to chat live or follow our news in real time, join the Pyrale community.",
       "button": "Join the Discord"
     }
@@ -130,7 +136,7 @@
       "cta_learn_more": "Learn more"
     },
     "discord": {
-      "heading": "Don’t miss any announcements",
+      "heading": "Don't miss any announcements",
       "description": "Join our Discord to get early access to all Pyrale news and announcements.",
       "button": "Join the Discord"
     }
@@ -139,7 +145,7 @@
     "title": "Our events",
     "subtitle": "Our first events are currently in preparation, announcements will be published soon.",
     "discord": {
-      "heading": "Don’t miss any announcements",
+      "heading": "Don't miss any announcements",
       "description": "Join our Discord to get early access to all Pyrale news and announcements.",
       "button": "Join the Discord"
     }
@@ -150,39 +156,24 @@
       "subtitle": "Already have an account?",
       "subtitle_link": "Log in",
       "back": "Back",
-      "pseudo": "Username",
-      "email": "Email",
-      "password": "Password",
       "confirm_password": "Confirm password",
       "terms": "I accept the <terms>Terms of Service</terms> and the <privacy>Privacy Policy</privacy>.",
       "submit": "Sign up",
       "submit_google": "Sign up with Google",
       "submit_discord": "Sign up with Discord",
-      "submit_twitch": "Sign up with Twitch",
-      "or": "or",
-      "show_password": "Show password",
-      "hide_password": "Hide password",
-      "validation": {
-        "passwords_mismatch": "Passwords do not match",
-        "terms_required": "You must accept the terms to continue"
-      }
+      "submit_twitch": "Sign up with Twitch"
     },
     "login": {
       "title": "Nice to see you again!",
       "subtitle": "Don't have an account yet?",
       "subtitle_link": "Sign up",
       "back": "Back",
-      "email": "Email",
-      "password": "Password",
       "remember_me": "Remember me",
       "forgot_password": "Forgot password?",
       "submit": "Log in",
       "submit_google": "Log in with Google",
       "submit_discord": "Log in with Discord",
-      "submit_twitch": "Log in with Twitch",
-      "or": "or",
-      "show_password": "Show password",
-      "hide_password": "Hide password"
+      "submit_twitch": "Log in with Twitch"
     }
   },
   "footer": {

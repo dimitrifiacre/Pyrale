@@ -64,18 +64,18 @@ export function RegisterForm() {
         .object({
           pseudo: z
             .string()
-            .min(3, tc("validation.min_chars", { count: 3 }))
-            .max(16, tc("validation.max_chars", { count: 16 })),
+            .min(3, tc("validation.min_username", { count: 3 }))
+            .max(16, tc("validation.max_username", { count: 16 })),
           email: z.string().email(tc("validation.email_invalid")),
           password: z.string().min(8, tc("validation.min_chars", { count: 8 })),
           confirmPassword: z.string().min(1, tc("validation.required")),
-          terms: z.boolean().refine((v) => v === true, { message: t("validation.terms_required") }),
+          terms: z.boolean().refine((v) => v === true, { message: tc("validation.terms_required") }),
         })
         .superRefine(({ password, confirmPassword }, ctx) => {
           if (confirmPassword && password !== confirmPassword) {
             ctx.addIssue({
               code: z.ZodIssueCode.custom,
-              message: t("validation.passwords_mismatch"),
+              message: tc("validation.passwords_mismatch"),
               path: ["confirmPassword"],
             })
           }
@@ -105,7 +105,7 @@ export function RegisterForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6" noValidate>
       <Field>
-        <FieldLabel htmlFor="pseudo">{t("pseudo")}</FieldLabel>
+        <FieldLabel htmlFor="pseudo">{tc("fields.username")}</FieldLabel>
         <Input
           id="pseudo"
           type="text"
@@ -117,7 +117,7 @@ export function RegisterForm() {
       </Field>
 
       <Field>
-        <FieldLabel htmlFor="email">{t("email")}</FieldLabel>
+        <FieldLabel htmlFor="email">{tc("fields.email")}</FieldLabel>
         <Input
           id="email"
           type="email"
@@ -129,7 +129,7 @@ export function RegisterForm() {
       </Field>
 
       <Field>
-        <FieldLabel htmlFor="password">{t("password")}</FieldLabel>
+        <FieldLabel htmlFor="password">{tc("fields.password")}</FieldLabel>
         <div className="relative">
           <Input
             id="password"
@@ -143,7 +143,7 @@ export function RegisterForm() {
             type="button"
             variant="ghost"
             onClick={() => setShowPassword((v) => !v)}
-            aria-label={showPassword ? t("hide_password") : t("show_password")}
+            aria-label={showPassword ? tc("fields.hide_password") : tc("fields.show_password")}
             className="absolute inset-y-0 right-0 hover:bg-transparent"
             isIcon
           >
@@ -168,7 +168,7 @@ export function RegisterForm() {
             type="button"
             variant="ghost"
             onClick={() => setShowConfirmPassword((v) => !v)}
-            aria-label={showConfirmPassword ? t("hide_password") : t("show_password")}
+            aria-label={showConfirmPassword ? tc("fields.hide_password") : tc("fields.show_password")}
             className="absolute inset-y-0 right-0 hover:bg-transparent"
             isIcon
           >
@@ -210,7 +210,7 @@ export function RegisterForm() {
 
       <div className="flex items-center gap-3">
         <Separator className="flex-1" />
-        <span className="text-sm text-muted-foreground">{t("or")}</span>
+        <span className="text-sm text-muted-foreground">{tc("form.or")}</span>
         <Separator className="flex-1" />
       </div>
 

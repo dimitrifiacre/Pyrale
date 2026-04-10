@@ -99,7 +99,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6" noValidate>
       <Field>
-        <FieldLabel htmlFor="email">{t("email")}</FieldLabel>
+        <FieldLabel htmlFor="email">{tc("fields.email")}</FieldLabel>
         <Input
           id="email"
           type="email"
@@ -111,7 +111,7 @@ export function LoginForm() {
       </Field>
 
       <Field>
-        <FieldLabel htmlFor="password">{t("password")}</FieldLabel>
+        <FieldLabel htmlFor="password">{tc("fields.password")}</FieldLabel>
         <div className="relative">
           <Input
             id="password"
@@ -125,7 +125,7 @@ export function LoginForm() {
             type="button"
             variant="ghost"
             onClick={() => setShowPassword((v) => !v)}
-            aria-label={showPassword ? t("hide_password") : t("show_password")}
+            aria-label={showPassword ? tc("fields.hide_password") : tc("fields.show_password")}
             className="absolute inset-y-0 right-0 hover:bg-transparent"
             isIcon
           >
@@ -167,7 +167,7 @@ export function LoginForm() {
 
       <div className="flex items-center gap-3">
         <Separator className="flex-1" />
-        <span className="text-sm text-muted-foreground">{t("or")}</span>
+        <span className="text-sm text-muted-foreground">{tc("form.or")}</span>
         <Separator className="flex-1" />
       </div>
 
