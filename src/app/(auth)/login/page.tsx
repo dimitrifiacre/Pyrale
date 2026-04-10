@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
@@ -5,6 +6,23 @@ import { ArrowLeftIcon } from "lucide-react"
 
 import { Logo } from "@/components/ui/logo"
 import { LoginForm } from "@/components/auth/login-form"
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations();
+  return {
+    title: t("meta.login.title"),
+    description: t("meta.login.description"),
+    openGraph: {
+      title: `${t("meta.login.title")} | Pyrale`,
+      description: t("meta.login.description"),
+      url: "https://pyrale.fr/login",
+    },
+    robots: {
+      index: false,
+      follow: true,
+    }
+  };
+}
 
 export default async function LoginPage() {
   const t = await getTranslations("auth.login")
