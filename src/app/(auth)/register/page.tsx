@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("meta.register.title"),
     description: t("meta.register.description"),
     openGraph: {
-      title: `${t("meta.contact.title")} | Pyrale`,
+      title: `${t("meta.register.title")} | Pyrale`,
       description: t("meta.register.description"),
       url: "https://pyrale.fr/register",
     },
