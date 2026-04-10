@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TeamMemberCard, type TeamMember } from "./team-member-card";
+import Link from "next/link";
 
 const TEAM_MEMBERS: TeamMember[] = [
   {
@@ -139,7 +140,9 @@ export default async function AboutPage() {
             <p className="max-w-sm text-sm text-muted-foreground">{t("join.description")}</p>
           </div>
         </div>
-        <Button>{t("join.button")}</Button>
+        <Button>
+          <Link href="https://pyrale.com/recrutement" target="_blank">{t("join.button")}</Link>
+        </Button>
       </section>
 
     </div>
