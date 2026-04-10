@@ -136,6 +136,25 @@
       "button": "Rejoindre le discord"
     }
   },
+  "auth": {
+    "login": {
+      "title": "Content de te revoir !",
+      "subtitle": "Pas encore de compte ?",
+      "subtitle_link": "Inscris-toi",
+      "back": "Retour",
+      "email": "Email",
+      "password": "Mot de passe",
+      "remember_me": "Se souvenir de moi",
+      "forgot_password": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "submit_google": "Se connecter avec Google",
+      "submit_discord": "Se connecter avec Discord",
+      "submit_twitch": "Se connecter avec Twitch",
+      "or": "ou",
+      "show_password": "Afficher le mot de passe",
+      "hide_password": "Masquer le mot de passe"
+    }
+  },
   "footer": {
     "brand": {
       "tagline": "Là où les expériences se métamorphosent",

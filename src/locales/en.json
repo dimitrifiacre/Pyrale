@@ -136,6 +136,25 @@
       "button": "Join the Discord"
     }
   },
+  "auth": {
+    "login": {
+      "title": "Nice to see you again!",
+      "subtitle": "Don't have an account yet?",
+      "subtitle_link": "Sign up",
+      "back": "Back",
+      "email": "Email",
+      "password": "Password",
+      "remember_me": "Remember me",
+      "forgot_password": "Forgot password?",
+      "submit": "Log in",
+      "submit_google": "Log in with Google",
+      "submit_discord": "Log in with Discord",
+      "submit_twitch": "Log in with Twitch",
+      "or": "or",
+      "show_password": "Show password",
+      "hide_password": "Hide password"
+    }
+  },
   "footer": {
     "brand": {
       "tagline": "Where experiences transform",
