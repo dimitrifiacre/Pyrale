@@ -66,6 +66,11 @@
       "login": "Se connecter",
       "change_language": "Changer de langue"
     },
+    "user": {
+      "profile": "Mon profil",
+      "settings": "Mes paramètres",
+      "logout": "Se déconnecter"
+    },
     "aria": {
       "home": "Page d'accueil",
       "open_menu": "Ouvrir le menu",
@@ -116,7 +121,7 @@
       "message": "Message",
       "success": {
         "title": "Message envoyé",
-        "description": "On te répondra dès que possible"
+        "description": "On te répondra dès que possible."
       }
     },
     "discord": {
@@ -161,7 +166,16 @@
       "submit": "S'inscrire",
       "submit_google": "S'inscrire avec Google",
       "submit_discord": "S'inscrire avec Discord",
-      "submit_twitch": "S'inscrire avec Twitch"
+      "submit_twitch": "S'inscrire avec Twitch",
+      "success": {
+        "title": "Succès",
+        "description": "Ton compte a bien été créé."
+      },
+      "errors": {
+        "email_taken": "Cette adresse email est déjà utilisée.",
+        "username_taken": "Ce pseudo est déjà pris.",
+        "server_error": "Une erreur est survenue, réessaie plus tard."
+      }
     },
     "login": {
       "title": "Content de te revoir !",
@@ -173,7 +187,47 @@
       "submit": "Se connecter",
       "submit_google": "Se connecter avec Google",
       "submit_discord": "Se connecter avec Discord",
-      "submit_twitch": "Se connecter avec Twitch"
+      "submit_twitch": "Se connecter avec Twitch",
+      "errors": {
+        "invalid_credentials": "Email ou mot de passe incorrect.",
+        "email_not_confirmed": "Tu dois confirmer ton email avant de te connecter. Vérifie ta boîte mail.",
+        "server_error": "Une erreur est survenue, réessaie plus tard."
+      }
+    },
+    "forgot_password": {
+      "title": "Mot de passe oublié ?",
+      "subtitle": "Saisis ton adresse email pour recevoir un lien de réinitialisation.",
+      "back": "Retour",
+      "submit": "Envoyer le lien",
+      "success": {
+        "title": "Email envoyé",
+        "description": "Si un compte est associé à cette adresse, tu recevras un lien de réinitialisation dans quelques instants.",
+        "back_to_login": "Retour à la connexion"
+      },
+      "errors": {
+        "server_error": "Une erreur est survenue, réessaie plus tard."
+      }
+    },
+    "reset_password": {
+      "title": "Nouveau mot de passe",
+      "subtitle": "Choisis un nouveau mot de passe sécurisé pour ton compte.",
+      "back": "Retour",
+      "new_password": "Nouveau mot de passe",
+      "confirm_password": "Confirmer le mot de passe",
+      "submit": "Mettre à jour le mot de passe",
+      "success": {
+        "title": "Mot de passe mis à jour !",
+        "description": "Ton mot de passe a bien été modifié.",
+        "back_to_login": "Se connecter"
+      },
+      "errors": {
+        "invalid_link": "Ce lien est invalide ou a expiré. Demande un nouveau lien.",
+        "server_error": "Une erreur est survenue, réessaie plus tard."
+      }
+    },
+    "email_verified": {
+      "title": "Email confirmé",
+      "description": "Ton adresse email a bien été vérifiée. Bienvenue sur Pyrale !"
     }
   },
   "footer": {

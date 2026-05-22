@@ -5,8 +5,10 @@ import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useTranslations } from "next-intl"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { EyeIcon, EyeOffIcon } from "lucide-react"
+import { toast } from "sonner"
+import { signIn } from "next-auth/react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -53,6 +55,7 @@ function TwitchIcon() {
 export function RegisterForm() {
   const t = useTranslations("auth.register")
   const tc = useTranslations("common")
+  const router = useRouter()
 
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
@@ -65,8 +68,8 @@ export function RegisterForm() {
           pseudo: z
             .string()
             .min(3, tc("validation.min_username", { count: 3 }))
-            .max(16, tc("validation.max_username", { count: 16 })),
-          email: z.string().email(tc("validation.email_invalid")),
+            .max(32, tc("validation.max_username", { count: 32 })),
+          email: z.email(tc("validation.email_invalid")),
           password: z.string().min(8, tc("validation.min_chars", { count: 8 })),
           confirmPassword: z.string().min(1, tc("validation.required")),
           terms: z.boolean().refine((v) => v === true, { message: tc("validation.terms_required") }),
@@ -74,13 +77,13 @@ export function RegisterForm() {
         .superRefine(({ password, confirmPassword }, ctx) => {
           if (confirmPassword && password !== confirmPassword) {
             ctx.addIssue({
-              code: z.ZodIssueCode.custom,
+              code: "custom",
               message: tc("validation.passwords_mismatch"),
               path: ["confirmPassword"],
             })
           }
         }),
-    [tc, t]
+    [tc]
   )
 
   const {
@@ -93,10 +96,52 @@ export function RegisterForm() {
     defaultValues: { terms: false },
   })
 
-  const onSubmit = async (_data: RegisterFormData) => {
+  const onSubmit = async (data: RegisterFormData) => {
     setIsLoading(true)
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800))
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: data.pseudo,
+          email: data.email,
+          password: data.password,
+          confirmPassword: data.confirmPassword,
+          terms: data.terms,
+        }),
+      })
+
+      const json = await response.json()
+
+      if (!response.ok) {
+        const errorKey = json.error as string
+        const knownErrors: Record<string, string> = {
+          email_taken: t("errors.email_taken"),
+          username_taken: t("errors.username_taken"),
+        }
+        toast.error(knownErrors[errorKey] ?? t("errors.server_error"))
+        return
+      }
+
+      // Connexion automatique après inscription
+      const result = await signIn("credentials", {
+        email: data.email,
+        password: data.password,
+        redirect: false,
+      })
+
+      if (!result || result.error) {
+        // Inscription réussie mais connexion auto échouée → rediriger vers login
+        toast.success(t("success.title"), { description: t("success.description") })
+        router.push("/login")
+        return
+      }
+
+      toast.success(t("success.title"), { description: t("success.description") })
+      router.push("/")
+      router.refresh()
+    } catch {
+      toast.error(t("errors.server_error"))
     } finally {
       setIsLoading(false)
     }
@@ -194,9 +239,13 @@ export function RegisterForm() {
         <FieldContent>
           <FieldLabel htmlFor="terms" className="font-normal leading-snug">
             <p>
-              {t.rich('terms', {
-                privacy: (chunks) => ( <a href="https://policies.google.com/privacy" className="text-primary hover:underline">{chunks}</a> ),
-                terms: (chunks) => ( <a href="https://policies.google.com/terms" className="text-primary hover:underline">{chunks}</a> ),
+              {t.rich("terms", {
+                privacy: (chunks) => (
+                  <a href="/privacy" className="text-primary hover:underline">{chunks}</a>
+                ),
+                terms: (chunks) => (
+                  <a href="/terms" className="text-primary hover:underline">{chunks}</a>
+                ),
               })}
             </p>
           </FieldLabel>

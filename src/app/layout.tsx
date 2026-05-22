@@ -7,6 +7,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { Providers } from "@/components/providers";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -52,10 +53,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html lang={locale} suppressHydrationWarning className={cn("font-sans", geist.variable)}>
       <body className={`${rubikSans.variable} min-h-screen bg-background text-foreground antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-            {children}
-            <Toaster position="top-right" />
-          </ThemeProvider>
+          <Providers>
+            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+              {children}
+              <Toaster position="top-right" />
+            </ThemeProvider>
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

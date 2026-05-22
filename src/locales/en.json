@@ -66,6 +66,11 @@
       "login": "Log in",
       "change_language": "Change language"
     },
+    "user": {
+      "profile": "My profile",
+      "settings": "Settings",
+      "logout": "Log out"
+    },
     "aria": {
       "home": "Home page",
       "open_menu": "Open menu",
@@ -161,7 +166,16 @@
       "submit": "Sign up",
       "submit_google": "Sign up with Google",
       "submit_discord": "Sign up with Discord",
-      "submit_twitch": "Sign up with Twitch"
+      "submit_twitch": "Sign up with Twitch",
+      "success": {
+        "title": "Success",
+        "description": "Your account has been created."
+      },
+      "errors": {
+        "email_taken": "This email address is already in use.",
+        "username_taken": "This username is already taken.",
+        "server_error": "An error occurred, please try again later."
+      }
     },
     "login": {
       "title": "Nice to see you again!",
@@ -173,7 +187,47 @@
       "submit": "Log in",
       "submit_google": "Log in with Google",
       "submit_discord": "Log in with Discord",
-      "submit_twitch": "Log in with Twitch"
+      "submit_twitch": "Log in with Twitch",
+      "errors": {
+        "invalid_credentials": "Invalid email or password.",
+        "email_not_confirmed": "You must confirm your email before logging in. Check your inbox.",
+        "server_error": "An error occurred, please try again later."
+      }
+    },
+    "forgot_password": {
+      "title": "Forgot password?",
+      "subtitle": "Enter your email address to receive a reset link.",
+      "back": "Back",
+      "submit": "Send reset link",
+      "success": {
+        "title": "Email sent",
+        "description": "If an account is associated with this email, you will receive a reset link shortly.",
+        "back_to_login": "Back to login"
+      },
+      "errors": {
+        "server_error": "An error occurred, please try again later."
+      }
+    },
+    "reset_password": {
+      "title": "New password",
+      "subtitle": "Choose a new secure password for your account.",
+      "back": "Back",
+      "new_password": "New password",
+      "confirm_password": "Confirm password",
+      "submit": "Update password",
+      "success": {
+        "title": "Password updated!",
+        "description": "Your password has been updated successfully.",
+        "back_to_login": "Log in"
+      },
+      "errors": {
+        "invalid_link": "This link is invalid or has expired. Request a new reset link.",
+        "server_error": "An error occurred, please try again later."
+      }
+    },
+    "email_verified": {
+      "title": "Email confirmed",
+      "description": "Your email address has been verified. Welcome to Pyrale!"
     }
   },
   "footer": {

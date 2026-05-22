@@ -2,4 +2,6 @@ node_modules
 .next
 next-env.d.ts
 .env.local
+.env
 src/app/(main)/playground/
+emails

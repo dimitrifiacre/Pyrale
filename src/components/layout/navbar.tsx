@@ -3,11 +3,21 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { User } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
+import { User, LogOut, Settings, UserCircle } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { MenuIcon } from "@/components/animate-ui/icons/menu";
 import { LanguageSwitcher } from "../ui/language-switcher";
 
@@ -47,6 +57,84 @@ function useScrolled(threshold = 10) {
   return scrolled;
 }
 
+interface UserButtonProps {
+  mobile?: boolean;
+  solid?: boolean;
+}
+
+function UserButton({ mobile = false, solid = true }: UserButtonProps) {
+  const t = useTranslations("navbar");
+  const router = useRouter();
+  const { data: session, status } = useSession();
+
+  const handleLogout = async () => {
+    await signOut({ redirect: false });
+    router.push("/");
+  };
+
+  // État inconnu — on réserve l'espace pour éviter le layout shift
+  if (status === "loading") {
+    return mobile
+      ? <div className="size-[38px]" aria-hidden />
+      : <div className="h-[38px] w-[104px]" aria-hidden />;
+  }
+
+  if (status === "unauthenticated" || !session) {
+    if (mobile) {
+      return (
+        <Button isIcon asChild>
+          <Link href="/login" aria-label={t("aria.user_profile")}>
+            <User />
+          </Link>
+        </Button>
+      );
+    }
+    return (
+      <Button asChild>
+        <Link href="/login">{t("actions.login")}</Link>
+      </Button>
+    );
+  }
+
+  const username = session.user.username;
+  const initial = username ? username[0].toUpperCase() : "?";
+
+  return (
+    <DropdownMenu modal={false}>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="ghost"
+          isIcon
+          aria-label={username ?? t("aria.user_profile")}
+          className={!solid ? "hover:bg-neutral-50/10" : undefined}
+        >
+          <Avatar>
+            <AvatarFallback>{initial}</AvatarFallback>
+          </Avatar>
+        </Button>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem>
+          <UserCircle />
+          {t("user.profile")}
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Settings />
+          {t("user.settings")}
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={handleLogout}>
+          <LogOut />
+          {t("user.logout")}
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+// ─── Navbar ──────────────────────────────────────────────────────────────────
+
 export default function Navbar({ variant = "default" }: NavbarProps) {
   const t = useTranslations();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -77,6 +165,7 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
       )}
 
       <div className="relative container mx-auto flex h-[70px] items-center justify-between px-6 md:px-12">
+        {/* Desktop nav */}
         <nav className="hidden md:flex md:flex-1 md:items-center md:gap-6">
           <Link href="/" aria-label={t("navbar.aria.home")}>
             <Logo />
@@ -95,13 +184,13 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
           </div>
         </nav>
 
+        {/* Desktop right */}
         <div className="hidden md:flex md:items-center md:gap-2">
           <LanguageSwitcher solid={isSolid} />
-          <Button asChild>
-            <Link href="/login">{t("navbar.actions.login")}</Link>
-          </Button>
+          <UserButton solid={isSolid} />
         </div>
 
+        {/* Mobile bar */}
         <div className="relative flex w-full items-center justify-between md:hidden">
           <Button
             variant="ghost"
@@ -125,14 +214,11 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
             <Logo />
           </Link>
 
-          <Button isIcon asChild>
-            <Link href="/login" aria-label={t("navbar.aria.user_profile")}>
-              <User />
-            </Link>
-          </Button>
+          <UserButton mobile solid={isSolid} />
         </div>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence initial={false}>
         {mobileOpen && (
           <motion.div
